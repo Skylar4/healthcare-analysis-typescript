@@ -1,5 +1,11 @@
+import { FlipWordsDemo } from "../democomponents/FlipWordsDemo";
+
 const MainPage = () => {
-  return <div>MainPage</div>;
+  return (
+    <div>
+      <FlipWordsDemo />
+    </div>
+  );
 };
 
 export default MainPage;
