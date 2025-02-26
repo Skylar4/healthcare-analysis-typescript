@@ -31,7 +31,7 @@ export function NavigationMenuDemo() {
         <NavigationMenuItem>
           <Link to="/aboutus">
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Aboutus
+              About us
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
