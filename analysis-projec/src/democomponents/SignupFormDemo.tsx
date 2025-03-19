@@ -4,8 +4,29 @@ import { Label } from "../../src/components/ui/label";
 import { Input } from "../../src/components/ui/input";
 import { cn } from "../lib/utils";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 export function SignupFormDemo() {
+  const [symptons, setSymptons] = useState("");
+  const [age, setAge] = useState("");
+  const [gender, setGender] = useState("");
+
+  const [weight, setWeight] = useState("");
+  const [medicalHistory, setMedicalHistory] = useState("");
+  const [currentMedications, setCurrentMedications] = useState("");
+
+  const [allergies, setAllergies] = useState("");
+
+  const [somking, setSomking] = useState("");
+
+  const [alcohol, setAlcohol] = useState("");
+
+  const [exercise, setExercise] = useState("");
+
+  const [diet, setDiet] = useState("");
+
+  const [lang, setLang] = useState("");
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Form submitted");
@@ -27,68 +48,145 @@ export function SignupFormDemo() {
       </p>
 
       <form className="my-8" onSubmit={handleSubmit}>
-        <div className="mb-4 flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
-          <LabelInputContainer>
-            <Label htmlFor="firstname">Symptons</Label>
-            <Input id="firstname" placeholder="Tyler" type="text" />
-          </LabelInputContainer>
-          <LabelInputContainer>
-            <Label htmlFor="lastname">Age</Label>
-            <Input id="lastname" placeholder="Durden" type="text" />
-          </LabelInputContainer>
-        </div>
+        <LabelInputContainer className="mb-4">
+          <Label htmlFor="email">Symptons</Label>
+          <Input
+            onChange={(e) => {
+              setSymptons(e.target.value);
+            }}
+            id="email"
+            placeholder="What is Happening to You"
+            type="email"
+          />
+        </LabelInputContainer>
+
+        <LabelInputContainer className="mb-4">
+          <Label htmlFor="email">Age</Label>
+          <Input
+            id="email"
+            onChange={(e) => {
+              setAge(e.target.value);
+            }}
+            placeholder="How Old are you?"
+            type="email"
+          />
+        </LabelInputContainer>
+
         <LabelInputContainer className="mb-4">
           <Label htmlFor="email">Gender</Label>
-          <Input id="email" placeholder="projectmayhem@fc.com" type="email" />
+          <Input
+            id="email"
+            onChange={(e) => {
+              setGender(e.target.value);
+            }}
+            placeholder="projectmayhem@fc.com"
+            type="email"
+          />
         </LabelInputContainer>
 
         <LabelInputContainer className="mb-4">
           <Label htmlFor="email">Weight</Label>
-          <Input id="email" placeholder="projectmayhem@fc.com" type="email" />
+          <Input
+            id="email"
+            onChange={(e) => {
+              setWeight(e.target.value);
+            }}
+            placeholder="projectmayhem@fc.com"
+            type="email"
+          />
         </LabelInputContainer>
 
         <LabelInputContainer className="mb-4">
           <Label htmlFor="email">medicalHistory</Label>
-          <Input id="email" placeholder="projectmayhem@fc.com" type="email" />
+          <Input
+            id="email"
+            onChange={(e) => {
+              setMedicalHistory(e.target.value);
+            }}
+            placeholder="projectmayhem@fc.com"
+            type="email"
+          />
         </LabelInputContainer>
 
         <LabelInputContainer className="mb-4">
           <Label htmlFor="email">currentMedications</Label>
-          <Input id="email" placeholder="projectmayhem@fc.com" type="email" />
+          <Input
+            id="email"
+            onChange={(e) => {
+              setCurrentMedications(e.target.value);
+            }}
+            placeholder="projectmayhem@fc.com"
+            type="email"
+          />
         </LabelInputContainer>
 
         <LabelInputContainer className="mb-4">
           <Label htmlFor="email">allergies</Label>
-          <Input id="email" placeholder="projectmayhem@fc.com" type="email" />
+          <Input
+            id="email"
+            onChange={(e) => {
+              setAllergies(e.target.value);
+            }}
+            placeholder="projectmayhem@fc.com"
+            type="email"
+          />
         </LabelInputContainer>
 
-        <LabelInputContainer className="mb-4">
-          <Label htmlFor="email">lifestyle</Label>
-          <Input id="email" placeholder="projectmayhem@fc.com" type="email" />
-        </LabelInputContainer>
-        <LabelInputContainer className="mb-4">
-          <Label htmlFor="email">allergies</Label>
-          <Input id="email" placeholder="projectmayhem@fc.com" type="email" />
-        </LabelInputContainer>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="email">smoking</Label>
-          <Input id="email" placeholder="projectmayhem@fc.com" type="email" />
+          <Input
+            id="email"
+            onChange={(e) => {
+              setSomking(e.target.value);
+            }}
+            placeholder="projectmayhem@fc.com"
+            type="email"
+          />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="email">alcohol</Label>
-          <Input id="email" placeholder="projectmayhem@fc.com" type="email" />
+          <Input
+            id="email"
+            onChange={(e) => {
+              setAlcohol(e.target.value);
+            }}
+            placeholder="projectmayhem@fc.com"
+            type="email"
+          />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="email">exercise</Label>
-          <Input id="email" placeholder="projectmayhem@fc.com" type="email" />
+          <Input
+            id="email"
+            onChange={(e) => {
+              setExercise(e.target.value);
+            }}
+            placeholder="projectmayhem@fc.com"
+            type="email"
+          />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="email">diet</Label>
-          <Input id="email" placeholder="projectmayhem@fc.com" type="email" />
+          <Input
+            id="email"
+            onChange={(e) => {
+              setDiet(e.target.value);
+            }}
+            placeholder="projectmayhem@fc.com"
+            type="email"
+          />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="email">lang</Label>
-          <Input id="email" placeholder="projectmayhem@fc.com" type="email" />
+          <Input
+            id="email"
+            onChange={(e) => {
+              setLang(e.target.value);
+              console.log(lang);
+            }}
+            placeholder="projectmayhem@fc.com"
+            type="email"
+          />
         </LabelInputContainer>
 
         <button
