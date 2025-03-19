@@ -5,11 +5,13 @@ import { Input } from "../../src/components/ui/input";
 import { cn } from "../lib/utils";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import axios from "axios";
 
 export function SignupFormDemo() {
   const [symptons, setSymptons] = useState("");
   const [age, setAge] = useState("");
   const [gender, setGender] = useState("");
+  const [height, setHeight] = useState("");
 
   const [weight, setWeight] = useState("");
   const [medicalHistory, setMedicalHistory] = useState("");
@@ -34,8 +36,35 @@ export function SignupFormDemo() {
 
   const navigate = useNavigate();
 
-  function handleClick() {
+  async function handleClick() {
     navigate("/result");
+
+    const result = await axios.post(
+      " http://localhost:3001/api/v1/information",
+      {
+        symptoms: ["string"],
+        patientInfo: {
+          age: age,
+          gender: gender,
+          height: height,
+          weight: weight,
+          medicalHistory: [medicalHistory],
+          currentMedications: [currentMedications],
+          allergies: [allergies],
+          lifestyle: {
+            smoking: somking,
+            alcohol: alcohol,
+            exercise: exercise,
+            diet: diet,
+          },
+        },
+        lang: lang,
+      }
+    );
+
+    console.log(result);
+
+    localStorage.setItem("result", JSON.stringify(result.data));
   }
 
   return (
@@ -66,6 +95,18 @@ export function SignupFormDemo() {
             id="email"
             onChange={(e) => {
               setAge(e.target.value);
+            }}
+            placeholder="How Old are you?"
+            type="email"
+          />
+        </LabelInputContainer>
+
+        <LabelInputContainer className="mb-4">
+          <Label htmlFor="email">Height</Label>
+          <Input
+            id="email"
+            onChange={(e) => {
+              setHeight(e.target.value);
             }}
             placeholder="How Old are you?"
             type="email"
