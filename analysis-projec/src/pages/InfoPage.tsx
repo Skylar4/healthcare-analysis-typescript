@@ -1,5 +1,11 @@
+import { SignupFormDemo } from "../democomponents/SignupFormDemo";
+
 const InfoPage = () => {
-  return <div>InfoPage</div>;
+  return (
+    <div>
+      <SignupFormDemo />
+    </div>
+  );
 };
 
 export default InfoPage;
