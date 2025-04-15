@@ -110,7 +110,7 @@ export function SignupFormDemo() {
             onChange={(e) => {
               setHeight(e.target.value);
             }}
-            placeholder="How Old are you?"
+            placeholder="How tall are you?"
             type="email"
           />
         </LabelInputContainer>
