@@ -98,7 +98,7 @@ export function SignupFormDemo() {
             onChange={(e) => {
               setAge(e.target.value);
             }}
-            placeholder="How Old are you?"
+            placeholder="How old are you?"
             type="email"
           />
         </LabelInputContainer>
@@ -122,7 +122,7 @@ export function SignupFormDemo() {
             onChange={(e) => {
               setGender(e.target.value);
             }}
-            placeholder="projectmayhem@fc.com"
+            placeholder="ex: Male, Female, Other"
             type="email"
           />
         </LabelInputContainer>
@@ -134,7 +134,7 @@ export function SignupFormDemo() {
             onChange={(e) => {
               setWeight(e.target.value);
             }}
-            placeholder="projectmayhem@fc.com"
+            placeholder="ex: 150 lbs"
             type="email"
           />
         </LabelInputContainer>
@@ -146,7 +146,7 @@ export function SignupFormDemo() {
             onChange={(e) => {
               setMedicalHistory(e.target.value);
             }}
-            placeholder="projectmayhem@fc.com"
+            placeholder="ex: Diabetic, Hypertensive"
             type="email"
           />
         </LabelInputContainer>
@@ -158,7 +158,7 @@ export function SignupFormDemo() {
             onChange={(e) => {
               setCurrentMedications(e.target.value);
             }}
-            placeholder="projectmayhem@fc.com"
+            placeholder="Ex: Asprin, Ibuprofen, etc"
             type="email"
           />
         </LabelInputContainer>
@@ -170,7 +170,7 @@ export function SignupFormDemo() {
             onChange={(e) => {
               setAllergies(e.target.value);
             }}
-            placeholder="projectmayhem@fc.com"
+            placeholder="ex: Nuts, Pollen, etc"
             type="email"
           />
         </LabelInputContainer>
@@ -182,7 +182,7 @@ export function SignupFormDemo() {
             onChange={(e) => {
               setSomking(e.target.value);
             }}
-            placeholder="projectmayhem@fc.com"
+            placeholder="Often, Sometimes, Never"
             type="email"
           />
         </LabelInputContainer>
@@ -193,7 +193,7 @@ export function SignupFormDemo() {
             onChange={(e) => {
               setAlcohol(e.target.value);
             }}
-            placeholder="projectmayhem@fc.com"
+            placeholder="often, sometimes, never"
             type="email"
           />
         </LabelInputContainer>
@@ -204,7 +204,7 @@ export function SignupFormDemo() {
             onChange={(e) => {
               setExercise(e.target.value);
             }}
-            placeholder="projectmayhem@fc.com"
+            placeholder="often, sometimes, never"
             type="email"
           />
         </LabelInputContainer>
@@ -215,7 +215,7 @@ export function SignupFormDemo() {
             onChange={(e) => {
               setDiet(e.target.value);
             }}
-            placeholder="projectmayhem@fc.com"
+            placeholder="clean, junk, etc"
             type="email"
           />
         </LabelInputContainer>
@@ -227,7 +227,7 @@ export function SignupFormDemo() {
               setLang(e.target.value);
               console.log(lang);
             }}
-            placeholder="projectmayhem@fc.com"
+            placeholder="ex: English, Spanish, etc"
             type="email"
           />
         </LabelInputContainer>
@@ -237,7 +237,7 @@ export function SignupFormDemo() {
           className="group/btn relative block h-10 w-full rounded-md bg-gradient-to-br from-black to-neutral-600 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:bg-zinc-800 dark:from-zinc-900 dark:to-zinc-900 dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset]"
           type="submit"
         >
-          Sign up &rarr;
+          Submit &rarr;
           <BottomGradient />
         </button>
       </form>
